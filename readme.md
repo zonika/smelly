@@ -34,3 +34,9 @@ Right now there are only two routes:
 ## Setup
 
 you'll need to generate a notes list to keep locally. to do this, run `node updateNotes.js`
+
+## Running
+
+set up the server locally by running `npm install` followed by `node api.js`
+
+you should get a response by navigating to `localhost:8008/<any route above>` in your browser of choice.
