@@ -6,12 +6,12 @@ const app = require('express')(),
 app.get('/notes/:note', (req, res) => {
   const note = req.params.note;
   const noteStream = notes.searchByNote(note);
+  res.type('json');
 
   if (noteStream) {
-    res.type('json');
     noteStream.pipe(res);
   } else {
-    res.send(`no results for note ${note} :(`);
+    res.status(404).send(`no results for note ${note} :(`);
   }
 });
 
